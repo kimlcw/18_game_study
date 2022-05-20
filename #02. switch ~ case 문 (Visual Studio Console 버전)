@@ -1,0 +1,133 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+//파일 Save <Ctrl> + <S>
+//빌드 후 확인 방법  <Ctrl> + <F5>
+//빋드 후 디버그 방법 <F5>
+ 
+//switch ~ case 문
+//switch(조건식)
+//{
+//    case 상수:
+//        실행할 코드
+//       break;
+//
+//    case 상수:
+//        실행할 코드
+//       break;
+// 
+//    default:           //else if문의 맨 마지막 else 에 해당되는 구문(생략 가능하다.)
+//       break;
+//}
+ 
+namespace CShap_2018_4_19
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Console.WriteLine("반가워요 CShap 콘솔!!!");  //한줄 출력 함수
+ 
+            Console.Write("숫자 하나를 입력해 주세요 : ");
+            string a_IpStr = Console.ReadLine();     //한줄을 입력 받는 함수
+            int a_ii = int.Parse(a_IpStr);           //입력 받은 문자열을 숫자로 변환
+ 
+            switch(a_ii % 2)
+            {
+                case 0:
+                    Console.WriteLine("짝수입니다.");
+                    break;
+ 
+                case 1:
+                    Console.WriteLine("홀수입니다.");
+                    break;
+            }
+ 
+            //if((a_ii % 2) == 0)
+            //{
+            //    Console.WriteLine("짝수입니다.");
+            //}
+            //else if((a_ii % 2) == 1)
+            //{
+            //    Console.WriteLine("홀수입니다.");
+            //}
+ 
+            Console.Write("오늘의 요일을 입력해 주세요 : ");
+            string a_Day = Console.ReadLine();
+ 
+            switch(a_Day)
+            {
+                case "일":
+                    Console.WriteLine("오늘은 일요일입니다.");
+                    break;
+ 
+                case "월":
+                    Console.WriteLine("오늘은 월요일입니다.");
+                    break;
+ 
+                case "화":
+                    Console.WriteLine("오늘은 화요일입니다.");
+                    break;
+ 
+                case "수":
+                    Console.WriteLine("오늘은 수요일입니다.");
+                    break;
+ 
+                case "목":
+                    Console.WriteLine("오늘은 목요일입니다.");
+                    break;
+ 
+                case "금":
+                    Console.WriteLine("오늘은 금요일입니다.");
+                    break;
+ 
+                case "토":
+                    Console.WriteLine("오늘은 토요일입니다.");
+                    break;
+ 
+                default:
+                    Console.WriteLine("요일만 정확히 입력해 주세요.");
+                    break;
+            }
+ 
+            //if(a_Day == "일")
+            //{
+            //    Console.WriteLine("오늘은 일요일입니다.");
+            //}
+            //else if (a_Day == "월")
+            //{
+            //    Console.WriteLine("오늘은 월요일입니다.");
+            //}
+            //else if (a_Day == "화")
+            //{
+            //    Console.WriteLine("오늘은 화요일입니다.");
+            //}
+            //else if (a_Day == "수")
+            //{
+            //    Console.WriteLine("오늘은 수요일입니다.");
+            //}
+            //else if (a_Day == "목")
+            //{
+            //    Console.WriteLine("오늘은 목요일입니다.");
+            //}
+            //else if (a_Day == "금")
+            //{
+            //    Console.WriteLine("오늘은 금요일입니다.");
+            //}
+            //else if (a_Day == "토")
+            //{
+            //    Console.WriteLine("오늘은 토요일입니다.");
+            //}
+            //else
+            //{
+            //    Console.WriteLine("요일만 정확히 입력해 주세요.");
+            //}
+ 
+            Console.ReadKey();   //글자 하나 입력 대기
+        }
+    }
+}
+ 
