@@ -1,0 +1,114 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+ 
+//switch ~ case 문
+//switch(조건식)
+//{
+//    case 상수:
+//        실행할 코드
+//       break;
+//
+//    case 상수:
+//        실행할 코드
+//       break;
+// 
+//    default:           //else if문의 맨 마지막 else 에 해당되는 구문(생략 가능하다.)
+//       break;
+//}
+ 
+public class MyMain2 : MonoBehaviour {
+ 
+    string m_StrNnum = "";
+ 
+    //// Use this for initialization
+    //void Start () {
+ 
+    //}
+ 
+    //// Update is called once per frame
+    //void Update () {
+ 
+    //}
+ 
+    void OnGUI()
+    {
+        //GUI.Label(new Rect(20, 20, 500, 50),
+        //   "<color=#FAB0C1><size=25>" + "숫자 하나를 입력해 주세요 : " + "</size></color>");
+ 
+        //m_StrNnum = GUI.TextField(new Rect(10, 120, 130, 30), m_StrNnum);     //에디트박스
+ 
+        //if (m_StrNnum != "")
+        //{
+        //    int a_ii = int.Parse(m_StrNnum);
+ 
+        //    switch(a_ii % 2)
+        //    {
+        //        case 0:
+        //            GUI.Label(new Rect(20, 250, 500, 50),
+        //                "<color=#FFFFFF><size=25>" + "짝수입니다." + "</size></color>");
+        //            break;
+ 
+        //        case 1:
+        //            GUI.Label(new Rect(20, 250, 500, 50),
+        //                "<color=#FFFFFF><size=25>" + "홀수입니다." + "</size></color>");
+        //            break;
+        //    }
+        //}
+ 
+        GUI.Label(new Rect(20, 20, 500, 50),
+           "<color=#FAB0C1><size=25>" + "오늘의 요일을 입력해 주세요 : " + "</size></color>");
+ 
+        m_StrNnum = GUI.TextField(new Rect(10, 120, 130, 30), m_StrNnum);     //에디트박스
+ 
+        if (m_StrNnum != "")
+        {
+            switch (m_StrNnum)
+            {
+                case "일":
+                    GUI.Label(new Rect(20, 250, 500, 50),
+                             "<color=#FFFFFF><size=25>" + "오늘은 일요일입니다." + "</size></color>");
+                    break;
+ 
+                case "월":
+                    GUI.Label(new Rect(20, 250, 500, 50),
+                            "<color=#FFFFFF><size=25>" + "오늘은 월요일입니다." + "</size></color>");
+                    break;
+ 
+                case "화":
+                    GUI.Label(new Rect(20, 250, 500, 50),
+                            "<color=#FFFFFF><size=25>" + "오늘은 화요일입니다." + "</size></color>");
+                    break;
+ 
+                case "수":
+                    GUI.Label(new Rect(20, 250, 500, 50),
+                            "<color=#FFFFFF><size=25>" + "오늘은 수요일입니다." + "</size></color>");
+                    break;
+ 
+                case "목":
+                    GUI.Label(new Rect(20, 250, 500, 50),
+                            "<color=#FFFFFF><size=25>" + "오늘은 목요일입니다." + "</size></color>");
+                    break;
+ 
+                case "금":
+                    GUI.Label(new Rect(20, 250, 500, 50),
+                            "<color=#FFFFFF><size=25>" + "오늘은 금요일입니다." + "</size></color>");
+                    break;
+ 
+                case "토":
+                    GUI.Label(new Rect(20, 250, 500, 50),
+                            "<color=#FFFFFF><size=25>" + "오늘은 토요일입니다." + "</size></color>");
+                    break;
+ 
+                default:
+                    GUI.Label(new Rect(20, 250, 500, 50),
+                            "<color=#FFFFFF><size=25>" + "요일만 정확히 입력해 주세요." + "</size></color>");
+                    break;
+            }
+        }//if (m_StrNnum != "")
+ 
+ 
+    }
+ 
+}
+ 
