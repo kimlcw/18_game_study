@@ -1,0 +1,120 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+ 
+//for문
+//for(초기식; 조건식; 증감식)  
+//{
+//     반복 실행될 코드
+//}
+ 
+//while문
+//while(조건식)
+//{
+//      반복 실행될 코드
+//}
+ 
+//do ~ while문
+//do
+//{
+//      반복 실행될 코드
+//} while(조건식);  //여기서 주의하실 것은 마지막에 세미콜론이 붙는다는 것이다.
+ 
+namespace Stduy_2018_4_20
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //반복횟수 10번  num의 for문 안에서의 변화값은 0 ~ 9 
+            int num = 0;
+ 
+            for (num = 0; num < 10; num++)
+            {
+                Console.WriteLine("num : {0}", num);
+            }
+ 
+            Console.WriteLine("for문 종료 후 num : {0}", num);
+ 
+            //반복횟수 9번 ii의  for문 안에서의 변화값은 1 ~ 9 
+            for (int ii = 1; ii < 10; ii++)
+            {
+                Console.WriteLine("ii : {0}", ii);
+            }
+ 
+            //연습문제 구구단 7단을 for문을 이용해서 출력해 보자~
+            Console.WriteLine("<구구단 7단>");
+            for (int idx = 1; idx < 10; idx++)
+            {
+                Console.WriteLine("{0} * {1} = {2}", 7, idx, (7 * idx));
+            }
+            Console.WriteLine("\n");
+ 
+            //반복횟수 10번  xx의 for문 안에서의 변화값은 10 ~ 1 
+            for (int xx = 10; xx > 0; xx--)
+            {
+                Console.WriteLine("xx : {0}", xx);
+            }
+            Console.WriteLine("\n");
+ 
+            //구구단의 단을 입력 받고 출력을 for문을 이용해서 출력해 보자~
+            Console.Write("출력할 구구단의 단을 입력해 주세요 : ");
+            string a_str = Console.ReadLine(); //콘솔에서 문자열 한줄을 입력받는 함수
+            int a_Dan = int.Parse(a_str);      //문장 -> 정수 변환
+            Console.WriteLine("<구구단 {0}단>", a_Dan);
+            for (int idx = 1; idx < 10; idx++)
+            {
+                Console.WriteLine("{0} * {1} = {2}", a_Dan, idx, (a_Dan * idx));
+            }
+ 
+            Console.WriteLine("\n");
+ 
+            //이중 for문
+            Console.WriteLine("구구단 전체 출력");
+            for (int aDan = 2; aDan < 10; aDan++)
+            {
+                Console.WriteLine("<구구단 {0}단>", aDan);
+                for (int idx = 1; idx < 10; idx++)
+                {
+                    Console.WriteLine("{0} * {1} = {2}", aDan, idx, (aDan * idx));
+                }
+                Console.WriteLine("\n");
+            }// for(int aDan = 2; aDan < 10; aDan++)
+ 
+            //while문
+            int a_bb = 0;    //초기식
+            while (a_bb < 10) //조건식
+            {
+                Console.WriteLine("a_bb : {0}", a_bb);
+                a_bb++;      //증감식
+            }
+ 
+            //for문으로 바꿔보자
+            for (int a_bb2 = 0; a_bb2 < 10; a_bb2++)
+            {
+                Console.WriteLine("a_bb2 : {0}", a_bb2);
+            }
+ 
+            Console.WriteLine("\n");
+ 
+            int a_kk = 10;
+            while (20 < a_kk)
+            {
+                Console.WriteLine("a_kk : {0}", a_kk);
+                a_kk++;
+            }
+ 
+            do
+            {
+                Console.WriteLine("a_kk : {0}", a_kk);
+                a_kk++;
+            } while (20 < a_kk);
+ 
+ 
+            Console.ReadKey();
+        }
+    }
+}
+ 
